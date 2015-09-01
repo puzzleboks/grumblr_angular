@@ -1,0 +1,66 @@
+<html ng-app="grumblr">
+<head>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers/grumbles.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Grumblr</h1>
+
+
+  <div ng-controller="grumblesController as grumblesCtrl">
+    <div id="createGrumble">
+      <a href="#" ng-click="grumblesCtrl.toggleForm()">New Grumble</a>
+      <form ng-show="grumblesCtrl.formIsVisible" name="grumblesCtrl.grumbleForm" class='grumbleForm' ng-submit="grumblesCtrl.create()">
+        <label>Title</label>
+        <!-- I thought ng-model not scoped to the controller already, but I guess not? -->
+        <input type="text" name="title" ng-model="grumblesCtrl.title">
+        <label>Author Name</label>
+        <input type="text" name="authorName" ng-model="grumblesCtrl.authorName">
+        <label>Content</label>
+        <textarea name="content" ng-model="grumblesCtrl.content">new grumble content</textarea>
+        <label>Photo Url</label>
+        <input type="text" name="photoUrl" ng-model="grumblesCtrl.photoUrl">
+        <button class="new">New Grumble</button>
+      </form>
+    </div>
+    <div class="grumbles" ng-repeat="grumble in grumblesCtrl.grumbles">
+      <div class="grumble">
+        <div ng-show="!editGrumble">
+          <h2>{{ grumble.title }} <span class='delete' ng-click="grumblesCtrl.delete($index)">(X)</span></h2>
+          by: {{ grumble.authorName }}
+          <p>
+            {{ grumble.content }}
+          </p>
+          <img ng-src="{{ grumble.photoUrl }}" alt="">
+        </div>
+        <button class="edit" ng-click="grumblesCtrl.edit($index); editGrumble = !editGrumble">Edit Grumble</button>
+        <form ng-show="editGrumble" name="grumblesCtrl.grumbleForm" class='grumbleForm'>
+          <label>Title</label>
+          <input type="text" name="title" ng-model="grumblesCtrl.title">
+          <label>Author Name</label>
+          <input type="text" name="authorName" ng-model="grumblesCtrl.authorName">
+          <label>Content</label>
+          <textarea name="content" ng-model="grumblesCtrl.content">new grumble content</textarea>
+          <label>Photo Url</label>
+          <input type="text" name="photoUrl" ng-model="grumblesCtrl.photoUrl">
+          <!-- why in this case did you use ng-click, but used ng-submit on the form earlier? -->
+          <button class="new" ng-click="grumblesCtrl.update($index); editGrumble = !editGrumble">Save</button>
+          <button ng-click="editGrumble = !editGrumble" class="new">Cancel</button>
+        </form>
+
+        <form class="commentForm">
+          <label>Author Name:</label>
+          <input type="text" name="authorName">
+          <label>Content:</label>
+          <input type="text" name="content">
+          <button>Submit</button>
+        </form>
+        <div class="comments"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

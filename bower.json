@@ -1,0 +1,15 @@
+{
+  "name": "grumblr-angular",
+  "description": "A starter project for AngularJS",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.4.x",
+    "angular-mocks": "1.4.x",
+    "angular-route": "~1.4.0",
+    "bootstrap": "~3.1.1",
+    "jquery": "~2.1.1",
+    "underscore": "~1.8.3"
+  }
+}
