@@ -1,0 +1,21 @@
+<div>
+  <div class="grumble">
+    <div>
+      <h2><a ng-href="/#/grumbles/{{grumbleCtrl.grumble.id}}">{{ grumbleCtrl.grumble.title }}</a> <span class='delete' ng-click="grumbleCtrl.delete(grumbleCtrl.grumble.id)">(X)</span></h2>
+      by: {{ grumbleCtrl.grumble.authorName }}
+      <p>
+        {{ grumbleCtrl.grumble.content }}
+      </p>
+      <img ng-src="{{ grumbleCtrl.grumble.photoUrl }}" alt="">
+    </div>
+    <a ng-href="/#/grumbles/{{grumbleCtrl.grumble.id}}/edit">Edit Grumble</a>
+    <form class="commentForm">
+      <label>Author Name:</label>
+      <input type="text" name="authorName">
+      <label>Content:</label>
+      <input type="text" name="content">
+      <button>Submit</button>
+    </form>
+    <div class="comments"></div>
+  </div>
+</div>

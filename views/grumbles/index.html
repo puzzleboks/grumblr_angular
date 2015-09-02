@@ -1,0 +1,23 @@
+<div>
+  <a ng-href="/#/grumbles/new">New Grumble</a>
+  <div class="grumbles" ng-repeat="grumble in grumblesCtrl.grumbles">
+    <div class="grumble">
+      <div>
+        <h2><a ng-href="/#/grumbles/{{grumble.id}}">{{ grumble.title }}</a></h2>
+        by: {{ grumble.authorName }}
+        <p>
+          {{ grumble.content }}
+        </p>
+        <img ng-src="{{ grumble.photoUrl }}" alt="">
+      </div>
+      <form class="commentForm">
+        <label>Author Name:</label>
+        <input type="text" name="authorName">
+        <label>Content:</label>
+        <input type="text" name="content">
+        <button>Submit</button>
+      </form>
+      <div class="comments"></div>
+    </div>
+  </div>
+</div>
