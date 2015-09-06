@@ -9,6 +9,7 @@
 ### In-Class Solution
 
     $ git checkout -b controllers-and-directives origin/controllers-and-directives
+    $ bower install
 
 ### Homework Starter Code
 
@@ -29,6 +30,7 @@ Using the angular router requires a local server using http (not the `file://` p
 ### In-Class Starter Code
 
     $ git checkout -b controllers-and-directives-with-comments origin/controllers-and-directives-with-comments
+    $ bower install
 
 ### In-Class Solution
 
