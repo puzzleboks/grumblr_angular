@@ -40,4 +40,8 @@ Using the angular router requires a local server using http (not the `file://` p
 
     $ git checkout -b templating-and-routing origin/templating-and-routing
 
+### Homework Solution
+
+    $ git checkout -b templating-and-routing-with-comments origin/templating-and-routing-with-comments
+
 ## Day 3 - Firebase and Custom Directives
