@@ -4,7 +4,6 @@
   // index controller
   grumbleControllers.controller('grumblesController', ['Grumble', function(Grumble) {
     this.grumbles = Grumble.all;
-    console.log(this.grumbles)
   }]);
 
   // show controller (handles delete link on show page)
