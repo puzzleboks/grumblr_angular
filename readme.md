@@ -45,3 +45,15 @@ Using the angular router requires a local server using http (not the `file://` p
     $ git checkout -b templating-and-routing-with-comments origin/templating-and-routing-with-comments
 
 ## Day 3 - Firebase and Custom Directives
+
+### In-Class Starter Code
+
+    $ git checkout -b templating-and-routing-with-comments origin/templating-and-routing-with-comments
+
+### In-Class Solution
+
+    $ git checkout -b firebase-and-directives origin/firebase-and-directives
+
+### Homework Starter Code
+
+    $ git checkout -b firebase-and-directives origin/firebase-and-directives
