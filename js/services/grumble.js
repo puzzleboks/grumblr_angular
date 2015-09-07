@@ -14,7 +14,6 @@
       get: function (grumble, cb) {
 	var found = $firebaseObject(ref.child(grumble.id));
 	if(typeof cb == "function") cb(found)
-        console.log("got", found)
         return found
       },
       delete: function(grumble, cb){
