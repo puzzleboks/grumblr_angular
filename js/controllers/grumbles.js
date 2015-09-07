@@ -11,7 +11,6 @@
     this.grumble = Grumble.get({id: $routeParams.id}, function(grumble){
       grumble.comments = Comment.query({grumbleId: $routeParams.id});
     });
-    console.log("this grumble", this.grumble)
     this.delete = function(id){
       Grumble.delete({id: id})
       $location.path("/grumbles")
