@@ -3,7 +3,7 @@
   <div class="grumbles" ng-repeat="grumble in grumblesCtrl.grumbles">
     <div class="grumble">
       <div>
-        <h2><a ng-href="/#/grumbles/{{grumble.id}}">{{ grumble.title }}</a></h2>
+        <h2><a ng-href="/#/grumbles/{{grumble.$id}}">{{ grumble.title }}</a></h2>
         by: {{ grumble.authorName }}
         <p>
           {{ grumble.content }}
