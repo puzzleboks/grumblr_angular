@@ -7,6 +7,7 @@
     'ngResource',
     'grumbleControllers',
     'grumbleRouter',
-    'grumbleServices'
+    'grumbleServices',
+    'grumbleDirectives'
   ]);
 })()
