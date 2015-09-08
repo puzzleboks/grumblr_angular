@@ -15,6 +15,15 @@
 
     $ git checkout -b controllers-and-directives origin/controllers-and-directives
 
+For homework tonight, please add CRUD functionality for comments to this application.
+
+Start by adding some seed data to the grumbles controller: https://github.com/ga-dc/grumblr_angular/blob/controllers-and-directives/js/controllers/grumbles.js#L4
+
+Then display the comments on the page using `ng-repeat`
+
+Allow the user to toggle a new and edit form for comments. When the user submits the form, add or remove the comment from `this.grumbles`
+in the controller.
+
 ### Homework Solution
 
     $ git checkout -b controllers-and-directives-with-comments origin/controllers-and-directives-with-comments
