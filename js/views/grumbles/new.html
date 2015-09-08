@@ -1,13 +1,17 @@
 <div id="createGrumble">
   <form ng-submit="newGrumbleCtrl.create()">
     <label>Title</label>
-    <input type="text" name="title" ng-model="newGrumbleCtrl.grumble.title">
+    <input type="text" ng-model="newGrumbleCtrl.grumble.title">
+
     <label>Author Name</label>
-    <input type="text" name="authorName" ng-model="newGrumbleCtrl.grumble.authorName">
+    <input type="text" ng-model="newGrumbleCtrl.grumble.authorName">
+
     <label>Content</label>
-    <textarea name="content" ng-model="newGrumbleCtrl.grumble.content">new grumble content</textarea>
+    <textarea ng-model="newGrumbleCtrl.grumble.content"></textarea>
+
     <label>Photo Url</label>
-    <input type="text" name="photoUrl" ng-model="newGrumbleCtrl.grumble.photoUrl">
+    <input type="text" ng-model="newGrumbleCtrl.grumble.photoUrl">
+
     <button class="new">New Grumble</button>
   </form>
 </div>
