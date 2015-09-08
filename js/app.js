@@ -5,6 +5,7 @@
     'ngResource',
     'ngRoute',
     'grumbleServices',
+    'commentServices',
     'grumbleRouter',
     'grumbleControllers'
   ]);

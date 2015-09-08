@@ -24,6 +24,8 @@
         templateUrl: 'js/views/grumbles/edit.html',
         controller: 'editGrumbleController',
         controllerAs: 'editGrumbleCtrl'
+      }).otherwise({
+        redirectTo: "/grumbles"
       })
     }
   ])

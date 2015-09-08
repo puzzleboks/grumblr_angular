@@ -10,7 +10,7 @@
   <a class="edit" ng-href="/#/grumbles/{{grumbleCtrl.grumble.id}}/edit">Edit Grumble</a>
 
   <div ng-controller="commentsController as commentsCtrl">
-    <form class="commentForm" ng-submit="commentsCtrl.create( grumble )">
+    <form ng-submit="commentsCtrl.create( grumble )">
       <!-- <label>Author Name:</label> -->
       <!-- <input type="text" name="authorName"> -->
       <label>Content:</label>
@@ -21,8 +21,8 @@
   <div class="comments">
     <h3>Comments</h3>
     <p>{{grumble.newCommentContent}}</p>
-    <div ng-repeat="comment in grumble.comments">
-      <p>{{comment.id}}{{comment.content}}</p>
+    <div ng-repeat="comment in grumbleCtrl.grumble.comments">
+      <p>{{comment.content}}</p>
     </div>
   </div>
 </div>
