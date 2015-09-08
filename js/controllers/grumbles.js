@@ -1,5 +1,23 @@
 (function() {
   app = angular.module('grumbleControllers',[]);
+
+  app.controller('grumbleController', ['Grumble', '$routeParams', '$location', function(Grumble, $routeParams, $location) {
+    this.grumble = Grumble.get({id: $routeParams.id});
+    this.delete = function() {
+      Grumble.delete({id: $routeParams.id}, function() {
+        $location.path('/grumbles');
+      });
+    }
+  }])
+
+  app.controller('newGrumbleController', ['Grumble', '$location', function(Grumble, $location) {
+    this.create = function() {
+      Grumble.save(this.grumble, function() {
+        $location.path('/grumbles');
+      });
+    }
+  }])
+
   app.controller('grumblesController', ['Grumble', function(Grumble) {
     this.grumbles = Grumble.query();
 
