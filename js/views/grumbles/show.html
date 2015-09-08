@@ -9,20 +9,27 @@
   </div>
   <a class="edit" ng-href="/#/grumbles/{{grumbleCtrl.grumble.id}}/edit">Edit Grumble</a>
 
-  <div ng-controller="commentsController as commentsCtrl">
-    <form ng-submit="commentsCtrl.create( grumble )">
-      <!-- <label>Author Name:</label> -->
-      <!-- <input type="text" name="authorName"> -->
+  <div>
+    <form ng-submit="grumbleCtrl.createComment()">
+      <label>Author Name:</label>
+      <input type="text" ng-model="grumbleCtrl.newComment.authorName">
+
       <label>Content:</label>
-      <input type="text" name="content" ng-model="grumble.newCommentContent">
+      <input type="text" ng-model="grumbleCtrl.newComment.content">
+
       <button>Submit</button>
     </form>
   </div>
+
   <div class="comments">
     <h3>Comments</h3>
-    <p>{{grumble.newCommentContent}}</p>
+
     <div ng-repeat="comment in grumbleCtrl.grumble.comments">
-      <p>{{comment.content}}</p>
+      <div class='comment'>
+        <p>{{comment.content}}</p>
+        <p>by: {{comment.authorName}}</p>
+        <span ng-click="grumbleCtrl.deleteComment(comment)">(x)<span>
+      </div>
     </div>
   </div>
 </div>
