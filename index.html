@@ -15,7 +15,6 @@
       <a href="#" ng-click="grumblesCtrl.toggleForm()">New Grumble</a>
       <form ng-show="grumblesCtrl.formIsVisible" name="grumblesCtrl.grumbleForm" class='grumbleForm' ng-submit="grumblesCtrl.create()">
         <label>Title</label>
-        <!-- I thought ng-model not scoped to the controller already, but I guess not? -->
         <input type="text" name="title" ng-model="grumblesCtrl.title">
         <label>Author Name</label>
         <input type="text" name="authorName" ng-model="grumblesCtrl.authorName">
@@ -46,7 +45,6 @@
           <textarea name="content" ng-model="grumblesCtrl.content">new grumble content</textarea>
           <label>Photo Url</label>
           <input type="text" name="photoUrl" ng-model="grumblesCtrl.photoUrl">
-          <!-- why in this case did you use ng-click, but used ng-submit on the form earlier? -->
           <button class="new" ng-click="grumblesCtrl.update($index); editGrumble = !editGrumble">Save</button>
           <button ng-click="editGrumble = !editGrumble" class="new">Cancel</button>
         </form>
