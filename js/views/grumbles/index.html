@@ -1,44 +1,13 @@
 <a ng-href="/#/grumbles/new">New Grumble</a>
 <div class="grumbles" ng-repeat="grumble in grumblesCtrl.grumbles">
   <div class="grumble">
-    <div ng-show="!editGrumble">
+    <div>
       <h2><a ng-href="/#/grumbles/{{grumble.id}}">{{ grumble.title }}</a></h2>
       by: {{ grumble.authorName }}
       <p>
         {{ grumble.content }}
       </p>
       <img ng-src="{{ grumble.photoUrl }}" alt="">
-    </div>
-    <button class="edit" ng-click="grumblesCtrl.edit($index); editGrumble = !editGrumble">Edit Grumble</button>
-    <form ng-show="editGrumble" name="grumblesCtrl.grumbleForm" class='grumbleForm'>
-      <label>Title</label>
-      <input type="text" name="title" ng-model="grumblesCtrl.title">
-      <label>Author Name</label>
-      <input type="text" name="authorName" ng-model="grumblesCtrl.authorName">
-      <label>Content</label>
-      <textarea name="content" ng-model="grumblesCtrl.content">new grumble content</textarea>
-      <label>Photo Url</label>
-      <input type="text" name="photoUrl" ng-model="grumblesCtrl.photoUrl">
-      <!-- why in this case did you use ng-click, but used ng-submit on the form earlier? -->
-      <button class="new" ng-click="grumblesCtrl.update($index); editGrumble = !editGrumble">Save</button>
-      <button ng-click="editGrumble = !editGrumble" class="new">Cancel</button>
-    </form>
-
-    <div ng-controller="commentsController as commentsCtrl">
-      <form class="commentForm" ng-submit="commentsCtrl.create( grumble )">
-        <!-- <label>Author Name:</label> -->
-        <!-- <input type="text" name="authorName"> -->
-        <label>Content:</label>
-        <input type="text" name="content" ng-model="grumble.newCommentContent">
-        <button>Submit</button>
-      </form>
-    </div>
-    <div class="comments">
-      <h3>Comments</h3>
-      <p>{{grumble.newCommentContent}}</p>
-      <div ng-repeat="comment in grumble.comments">
-        <p>{{comment.id}}{{comment.content}}</p>
-      </div>
     </div>
   </div>
 </div>
