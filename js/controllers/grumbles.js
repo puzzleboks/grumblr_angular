@@ -1,5 +1,5 @@
 (function() {
-  app = angular.module('grumblr');
+  app = angular.module('grumbleControllers',[]);
   app.controller('grumblesController', function() {
     this.grumbles = [{ comments: [{ id: 1, content: "I'm a comment #1!" }], "id":667,"authorName":"Jesse","content":"Only those who attempt the impossible can achieve the absurd.","title":"29 hipster kanye quotes that people born after 1990 wil never understand","photoUrl":"https://splashbase.s3.amazonaws.com/getrefe/regular/tumblr_n6ni6khmfG1slhhf0o2_1280.jpg","created_at":"2015-09-01T14:10:07.845Z","updated_at":"2015-09-01T14:10:07.845Z"},
     { comments: [{ id: 2, content: "I'm a comment #2!" }], "id":668,"authorName":"Adam","content":"Do a bit more for your friends.","title":"8 sweet pokemons","photoUrl":"https://splashbase.s3.amazonaws.com/unsplash/regular/TIDqBLgQw6IUt5ZHKS0f_11891558035_eafdf53bf0_o.jpg%3Ffit%3Dcrop%26fm%3Djpg%26h%3D650%26q%3D75%26w%3D950","created_at":"2015-09-01T14:10:12.922Z","updated_at":"2015-09-01T14:10:12.922Z"},
