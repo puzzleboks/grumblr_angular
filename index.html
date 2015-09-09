@@ -49,6 +49,7 @@
           <button ng-click="editGrumble = !editGrumble" class="new">Cancel</button>
         </form>
 
+        <div class="comments" ng-repeat="comment in grumblesCtrl.grumbles">
         <form class="commentForm">
           <label>Author Name:</label>
           <input type="text" name="authorName">
@@ -56,7 +57,8 @@
           <input type="text" name="content">
           <button>Submit</button>
         </form>
-        <div class="comments"></div>
+        <!-- <div class="comments"></div> -->
+      </div>
       </div>
     </div>
   </div>
