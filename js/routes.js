@@ -13,6 +13,10 @@
      templateUrl: 'js/views/grumbles/show.html',
      controller: 'grumbleController',
      controllerAs: 'grumbleCtrl'
+   }).when("/grumbles/:id/edit",{
+     templateUrl: 'js/views/grumbles/edit.html',
+     controller: 'editGrumbleController',
+     controllerAs: 'editGrumbleCtrl'
    }).
    otherwise({
      redirectTo: "/grumbles"
