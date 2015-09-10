@@ -62,13 +62,16 @@
     }
   }])
 
-  app.controller( 'commentsController', function(){
+  app.controller('editGrumbleController', ['$routeParams', 'Grumble', '$location', function($routeParams, Grumble, $location){
+    this.grumble = Grumble.get({id: $routeParams.id})
+    this.edit = function(){
+      this.grumble.$update({id: this.grumble.id});
+      $location.path("/grumbles/" + this.grumble.id)
 
-    this.create = function( grumble ){
-      grumble.comments.unshift({
-        content: grumble.newCommentContent
-      });
-      grumble.newCommentContent = "";
+      // var self = this
+      // Grumble.update({id: this.grumble.id}, this.grumble, function(){
+      //   $location.path("/grumbles/" + self.id)
+      // })
     }
-  })
+  }])
 })();
