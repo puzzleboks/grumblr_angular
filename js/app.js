@@ -2,6 +2,10 @@
 
 (function() {
   var app = angular.module('grumblr', [
-    'grumbleControllers'
+    'grumbleControllers',
+    'ngResource',
+    'ngRoute',
+    'grumbleServices',
+    'grumbleRoutes'
   ]);
 })()

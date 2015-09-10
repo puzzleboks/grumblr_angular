@@ -1,0 +1,6 @@
+<a ng-href="/#/grumbles/new">Create New Grumble</a>
+<div ng-repeat='grumble in grumblesCtrl.grumbles'>
+{{grumble.title}}
+<a ng-href="/#/grumbles/{{grumble.id}}">show page</a>
+</div>
+<!-- <a ng-href="/#/grumbles/{{grumble.id}}">show page</a> -->

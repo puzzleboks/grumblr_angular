@@ -1,0 +1,8 @@
+<h2>Creating New Grumble</h2>
+<form ng-submit="newGrumbleCtrl.create()">
+  <input ng-model="newGrumbleCtrl.grumble.title" placeholder="title">
+  <input ng-model="newGrumbleCtrl.grumble.authorName" placeholder="author name">
+  <input ng-model="newGrumbleCtrl.grumble.content" placeholder="content">
+  <input ng-model="newGrumbleCtrl.grumble.photoUrl" placeholder="photo url">
+  <button type="submit">Create Grumble</button>
+</form>
