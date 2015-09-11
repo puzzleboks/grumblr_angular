@@ -1,4 +1,4 @@
-<form name="newGrumbleCtrl.grumbleForm" class='grumbleForm' ng-submit="newGrumbleCtrl.create()">
+<form name="newGrumbleCtrl.grumbleForm" class='grumbleForm'>
   <label>Title</label>
   <input type="text" name="title" ng-model="newGrumbleCtrl.grumble.title">
   <label>Author Name</label>
@@ -7,5 +7,11 @@
   <textarea name="content" ng-model="newGrumbleCtrl.grumble.content">new grumble content</textarea>
   <label>Photo Url</label>
   <input type="text" name="photoUrl" ng-model="newGrumbleCtrl.grumble.photoUrl">
-  <button class="new">New Grumble</button>
+  <span ng-if="editing">
+    <a ng-href="/#/grumbles/{{grumble.id}}">&larr; Back</a>
+    <button type="button" ng-click="update()">Update</button>
+  </span>
+  <span ng-if="!editing">
+    <button type="button" ng-click="create()">Create</button>
+  </span>
 </form>
